@@ -27,6 +27,24 @@
       stopTime = Date.now()
       console.log(stopTime)
     }
+
+    function startTime() {
+      for (let i = 0; i < 5; i++) {
+        setTimeout(() => {
+          document.getElementById('counter').innerHTML = i
+        }, ((4 - i) * 1000))
+      }
+
+      setTimeout(() => {
+        if (stopTime === undefined) {
+          document.getElementById('target').innerHTML = "Too Slow"
+        } else {
+        current = Date.now()
+        elapsed = current - stopTime
+        document.getElementById('target').innerHTML = "Time was " + elapsed 
+        }
+      }, 4000)
+    }
   </script>
 
 </body>
