@@ -50,6 +50,7 @@
 		let input = document.getElementById("input").value
 
 		element.innerHTML = input
+		element.color = "orange"
 		element.className = "divlist"
 
 		/* add it to the container */
@@ -59,7 +60,9 @@
 
 	function addFront() {
 		let element = document.createElement("div")
-		element.innerHTML = "an item at the front"
+		let input = document.getElementById("input").value
+
+		element.innerHTML = input
 		element.style.color = "blue"
 		element.className = "divlist"
 
